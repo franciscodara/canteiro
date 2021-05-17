@@ -1,66 +1,105 @@
-import React, { useState } from "react";
-import { Image, SafeAreaView, StyleSheet, Text } from "react-native";
-import wateringImg from "../assets/watering.png";
-import { Button } from "../components/Button";
-import colors from "../styles/colors";
+import React from 'react';
+import { 
+    SafeAreaView, 
+    Text, 
+    Image, 
+    TouchableOpacity, 
+    StyleSheet,
+    Dimensions,
+    View
+} from 'react-native';
+import { Feather } from '@expo/vector-icons';
+import { useNavigation } from '@react-navigation/core';
 
+import wateringImg from '../assets/watering.png';
+import colors from '../styles/colors';
+import fonts from '../styles/fonts';
 
+export function Welcome(){
 
-export function Welcome() {
-    const [visible, setVisible] = useState(true);
-
-    function handleVisibility() {
-        setVisible(false)
+    const navigation = useNavigation();
+    function handleStart() {
+        navigation.navigate("UserIdentification");
     }
-
     return(
-        <SafeAreaView style= {styles.container}>
-            <Text style= {styles.title}>
-                Um jeito fácil {"\n"}
-                de cuidar das {"\n"}
+        <SafeAreaView style={styles.container}>
+            <View style={styles.wrapper}>
+                <Text style={styles.title}>
+                Um jeito fácil{"\n"}
+                de cuidar das{"\n"}
                 suas plantas
-            </Text>
+                </Text>
+                    
+                <Image 
+                    source={wateringImg} 
+                    style={styles.image} 
+                    resizeMode="contain"
+                />        
 
-            {
-                visible &&
-                <Image source={wateringImg} style={styles.image}/>
-            }
-
-            <Text style= {styles.subtitle}>
-                Não esqueça de regar suas plantas. 
-                Nós lembramos sempre que você precisar.
-            </Text>
-
-            <Button title=">" />
-
+                <Text style={styles.subtitle}>                
+                    Não esqueça de regar suas plantas.{"\n"} 
+                    Nós cuidamos de lembrar você sempre que precisar.
+                </Text>
+                
+                <TouchableOpacity 
+                    style={styles.button} 
+                    activeOpacity={0.7}
+                    onPress={handleStart}
+                >                
+                    <Feather 
+                        name="chevron-right" 
+                        style={styles.buttonIcon} 
+                    />                
+                </TouchableOpacity>   
+            </View>       
         </SafeAreaView>
     )
 }
 
 const styles = StyleSheet.create({
-    container : {
+    container: {
+        flex: 1       
+    },
+
+    wrapper: {
         flex: 1,
-        alignItems: "center",
-        justifyContent: "space-between",
+        alignItems: 'center',
+        justifyContent: 'space-around',
+        paddingHorizontal: 20
     },
 
     title: {
-        fontSize: 32,
-        fontWeight: "bold",
-        textAlign: "center",
+        fontSize: 28,
+        textAlign: 'center',
         color: colors.heading,
-        marginTop: 40
+        marginTop: 38,
+        fontFamily: fonts.heading,
+        lineHeight: 34
     },
 
     subtitle: {
+        textAlign: 'center',
         fontSize: 18,
         paddingHorizontal: 20,
-        textAlign: "center",
-        color: colors.heading
+        color: colors.heading,
+        fontFamily: fonts.text
     },
 
-    image: {
-        width: 292,
-        height: 284
+    image: {       
+        height: Dimensions.get('window').width * 0.7
     },
+    button: {
+        backgroundColor: colors.green,
+        justifyContent: 'center',
+        alignItems: 'center',
+        borderRadius: 16,
+        marginBottom: 10,
+        height: 56,
+        width: 56,        
+    },
+    buttonIcon:{        
+        fontSize: 28,
+        color: colors.white
+    }
+
 });
