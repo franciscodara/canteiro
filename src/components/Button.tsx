@@ -1,11 +1,11 @@
 import React from "react";
-import {
-    SafeAreaView,
-    StyleSheet,
-    Text,
+import { 
     TouchableOpacity,
-    TouchableOpacityProps,
+    Text,
+    StyleSheet,
+    TouchableOpacityProps
 } from "react-native";
+
 import colors from "../styles/colors";
 import fonts from "../styles/fonts";
 
@@ -13,20 +13,19 @@ interface ButtonProps extends TouchableOpacityProps {
     title: string;
 }
 
-export function Button({ title, ...rest }: ButtonProps) {
-    return(
-        <SafeAreaView>
-            <TouchableOpacity
+export function Button({ title, ...rest }: ButtonProps ){
+    return (
+        <TouchableOpacity 
             style={styles.container}
             {...rest}
-            >
-                <Text style={styles.text}>
-                    { title }
-                </Text>
-            </TouchableOpacity>
-        </SafeAreaView>
+        >
+            <Text style={styles.text}>
+                { title }
+            </Text>
+        </TouchableOpacity>
+
     )
-}
+}; 
 
 const styles = StyleSheet.create({
     container: {
@@ -36,10 +35,9 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         alignItems: "center"
     },
-
     text: {
         fontSize: 16,
         color: colors.white,
         fontFamily: fonts.heading
     }
-})
+});
