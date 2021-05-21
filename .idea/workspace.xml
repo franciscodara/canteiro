@@ -6,17 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="17be60b9-9ae4-422c-b0f5-edc72ad0a3e6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/splash.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/splash.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Button.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PlantCardPrimary.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PlantCardPrimary.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Confirmation.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Confirmation.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/PlantSelect.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/PlantSelect.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/UserIdentification.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/UserIdentification.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/stack.routes.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/stack.routes.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/api.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,14 +40,16 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="184" y="137" width="1720" height="813" key="AVDManager" timestamp="1621517409454">
-      <screen x="0" y="38" width="1920" height="1042" />
+    <state x="131" y="107" width="1224" height="570" key="AVDManager" timestamp="1621537732844">
+      <screen x="0" y="38" width="1366" height="730" />
     </state>
     <state x="184" y="137" width="1720" height="813" key="AVDManager/0.38.1920.1042@0.38.1920.1042" timestamp="1621517409454" />
+    <state x="131" y="107" width="1224" height="570" key="AVDManager/1366.0.1920.1080/0.38.1366.730@0.38.1366.730" timestamp="1621537732844" />
     <state x="1550" y="103" width="1720" height="842" key="AVDManager/1366.0.1920.1080/0.38.1366.730@1366.0.1920.1080" timestamp="1621447465795" />
-    <state x="1815" y="194" width="1022" height="732" key="SettingsEditor" timestamp="1621258631313">
-      <screen x="1366" y="0" width="1920" height="1080" />
+    <state x="319" y="38" width="900" height="730" key="SettingsEditor" timestamp="1621617505927">
+      <screen x="0" y="38" width="1366" height="730" />
     </state>
+    <state x="319" y="38" width="900" height="730" key="SettingsEditor/1366.0.1920.1080/0.38.1366.730@0.38.1366.730" timestamp="1621617505927" />
     <state x="1815" y="194" width="1022" height="732" key="SettingsEditor/1366.0.1920.1080/0.38.1366.730@1366.0.1920.1080" timestamp="1621258631313" />
   </component>
 </project>

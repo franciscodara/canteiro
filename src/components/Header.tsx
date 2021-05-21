@@ -1,64 +1,60 @@
 import React, { useEffect, useState } from "react";
-import {
-    StyleSheet,
-    View,
-    Image,
-    Text
-} from "react-native";
-import AsyncStorage from "@react-native-async-storage/async-storage";
+import { StyleSheet, View, Text, Image } from "react-native";
 import { getStatusBarHeight } from "react-native-iphone-x-helper";
+import AsyncStorage from "@react-native-async-storage/async-storage";
+
 import userImg from "../assets/dara.png";
 import colors from "../styles/colors";
 import fonts from "../styles/fonts";
 
 export function Header() {
-    const [userName, setUserName] = useState<string>();
+  const [userName, setUserName] = useState<string>();
 
-    useEffect(() => {
-        async function loadStorageUserName() {
-            const user = await AsyncStorage.getItem("@canteiro:user");
-            setUserName(user || "")
-        }
-        loadStorageUserName();
+  useEffect(() => {
+    async function loadStorageUserName() {
+      const user = await AsyncStorage.getItem("@canteiro:user");
 
-    },[]);
+      setUserName(user || "");
+    }
 
-    return(
-        <View style={styles.container}>
-            <View>
-                <Text style={styles.greeting}>Olá,</Text>
-                <Text style={styles.userName}>{userName}</Text>
-            </View>
+    loadStorageUserName();
+  }, [userName]);
 
-            <Image source={userImg} style={styles.image} />
+  return (
+    <View style={styles.container}>
+      <View>
+        <Text style={styles.greeting}>Olá,</Text>
+        <Text style={styles.username}>{userName}</Text>
+      </View>
 
-        </View>
-    )
+      <Image source={userImg} style={styles.image} />
+    </View>
+  );
 }
 
 const styles = StyleSheet.create({
-    container: {
-        width: "100%",
-        flexDirection: "row",
-        justifyContent: "space-between",
-        alignItems: "center",
-        paddingVertical: 20,
-        marginTop: getStatusBarHeight(),
-    },
-    greeting: {
-        fontSize: 32,
-        color: colors.heading,
-        fontFamily: fonts.text,
-    },
-    userName: {
-        fontSize: 32,
-        color: colors.heading,
-        fontFamily: fonts.heading,
-        lineHeight: 40
-    },
-    image: {
-        width: 75,
-        height: 75,
-        borderRadius: 40
-    },
-})
+  container: {
+    width: "100%",
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    paddingVertical: 20,
+    marginTop: getStatusBarHeight(),
+  },
+  image: {
+    width: 70,
+    height: 70,
+    borderRadius: 40,
+  },
+  greeting: {
+    fontSize: 32,
+    color: colors.heading,
+    fontFamily: fonts.text,
+  },
+  username: {
+    fontSize: 32,
+    fontFamily: fonts.heading,
+    color: colors.heading,
+    lineHeight: 40,
+  },
+});
